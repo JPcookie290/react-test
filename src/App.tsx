@@ -1,10 +1,12 @@
 //import { useState } from "react";
 //import Animal from "./components/Animal";
-import InputControlled from "./components/InputControlled"
+//import InputControlled from "./components/InputControlled"
+
+import InputForm from "./components/InputForm"
 
 
 function App() {
-  return <InputControlled />
+  return <InputForm />
 }
 
 export default App
