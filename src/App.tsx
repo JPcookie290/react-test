@@ -1,15 +1,16 @@
 //import { useState } from "react";
 //import Animal from "./components/Animal";
 //import InputControlled from "./components/InputControlled"
+//import InputForm from "./components/InputForm"
+//import Parent from "./components/Parent";
 
-import InputForm from "./components/InputForm"
-
+import CountOnInput from "./components/CountOnInput";
 
 function App() {
-  return <InputForm />
+  return <CountOnInput />;
 }
 
-export default App
+export default App;
 
 // import Button from "./components/Button"
 // import ImportantList from "./components/ImportedList"
@@ -31,7 +32,7 @@ export default App
 // function App() {
 //   const colors = ["red", "green", "yellow"]
 //   const [backgroundColor, setBackgroundColor] = useState(colors[0]);
-  
+
 //   return   (
 //    <div style={{backgroundColor, padding: "100px"}}>
 //     {colors.map((color): JSX.Element => {
