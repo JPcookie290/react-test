@@ -1,4 +1,4 @@
-import { ChangeEvent, FormEvent, useState, useRef } from "react";
+import { FormEvent, useRef } from "react";
 
 export default function InputForm() {
   const fullNameInput = useRef<HTMLInputElement | null>(null);

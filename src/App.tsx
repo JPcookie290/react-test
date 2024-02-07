@@ -1,45 +1,50 @@
-//import { useState } from "react";
-//import Animal from "./components/Animal";
-//import InputControlled from "./components/InputControlled"
-//import InputForm from "./components/InputForm"
-//import Parent from "./components/Parent";
+import styled from "@emotion/styled";
+import DefaultButton from "./components/DefaultBUtton";
 
-import CountOnInput from "./components/CountOnInput";
+interface IPops {
+  title?: string;
+  className: string;
+}
+
+const MyButton = ({ className }: IPops) => (
+  <DefaultButton className={className} title="My Button" />
+);
+
+const StyledButton = styled(MyButton)<IPops>`
+  color: red;
+  padding: 10px;
+`;
+
+const StyledDiv = styled("div")`
+  padding: 2rem;
+  background-color: ${(props) => props.color || "#62ED26"};
+`;
+
+const Button = styled("button")`
+  color: #000;
+  padding 10px;
+  background-color: #f0e259;
+  border: 1px solid black;
+  border-radius: 5px;
+  &:hover {
+    color: #fff;
+    background-color: #f08e59;
+  }
+`;
+
+const Section = styled.section`
+  padding: 2rem;
+  background-color: #62ed26;
+`;
+const Aside = Section.withComponent("aside");
 
 function App() {
-  return <CountOnInput />;
+  return (
+    <main>
+      <Section>This is a styled Section</Section>
+      <Aside>This has the same style as Section</Aside>
+    </main>
+  );
 }
 
 export default App;
-
-// import Button from "./components/Button"
-// import ImportantList from "./components/ImportedList"
-// import JsxRegeln from "./components/JsxRegeln"
-
-// function App() {
-//   const alertClick = (message: string) => {
-//     alert(message)
-//   }
-//   return   (
-//     <div>
-//       <Button btnText="Click Me" handleClick={alertClick}/>
-//       <JsxRegeln />
-//       <ImportantList />
-//     </div>
-//   )
-// }
-
-// function App() {
-//   const colors = ["red", "green", "yellow"]
-//   const [backgroundColor, setBackgroundColor] = useState(colors[0]);
-
-//   return   (
-//    <div style={{backgroundColor, padding: "100px"}}>
-//     {colors.map((color): JSX.Element => {
-//       return (
-//         <button key={color} onClick={() => setBackgroundColor(color)}>{color}</button>
-//       )
-//     })}
-//    </div>
-//   )
-// }
