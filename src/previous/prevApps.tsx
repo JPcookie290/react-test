@@ -1,4 +1,65 @@
 /*
+import useScrolling from "./components/useScrolling";
+
+function App() {
+  const isScrolling = useScrolling();
+  return (
+    <div style={{ height: "1000px" }}>
+      <h1 style={{ position: "fixed" }}>{isScrolling.toString()}</h1>
+      {isScrolling && (
+        <p style={{ position: "fixed", top: "100px" }}>
+          hey i am scrolling down
+        </p>
+      )}
+    </div>
+  );
+}
+
+export default App;
+*/
+/*
+import { useId } from "react";
+
+function App() {
+  const id = useId();
+
+  return (
+    <label htmlFor={id}>
+      Name: <input id={id} type="text" />
+    </label>
+  );
+}
+
+export default App;
+*/
+/*
+import { useEffect, useState, useDebugValue } from "react";
+
+function useTitle() {
+  const [title, setTitle] = useState<string>("");
+  useDebugValue(`title is ${title}`);
+  useEffect(() => {
+    setTimeout(() => {
+      setTitle("testingDebugValue");
+    }, 2000);
+  }, [title]);
+  return title;
+}
+
+function App() {
+  const title = useTitle();
+
+  return (
+    <>
+      <h1>{title}</h1>
+    </>
+  );
+}
+
+export default App;
+*/
+
+/*
 import MyList from "./MyList";
 function App() {
     const [isDark, setIsDark] = useState(false);
